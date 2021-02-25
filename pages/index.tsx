@@ -1,53 +1,54 @@
-import {GetStaticProps} from 'next'
 import Head from 'next/head'
-import Link from 'next/link'
-import Date from '../components/date'
-import Layout from '../components/layout'
-import utilStyles from '../styles/utils.module.scss'
-import {getSortedPostsData} from '../lib/posts'
 
-interface HomeProps {
-    allPostsData: any
-}
+// The Storyblok Client
+import Storyblok from '../lib/storyblok'
+import useStoryblok from '../lib/storyblok-hook'
+import DynamicComponent from '../components/DynamicComponent'
 
-export default function Home({allPostsData}: HomeProps): JSX.Element {
+export default function Home(props) {
+    // the Storyblok hook to enable live updates
+    const story = useStoryblok(props.story)
+
     return (
-        <Layout home>
+        <div>
             <Head>
-                <title>This is title from head</title>
+                <title>Create Next App</title>
+                <link rel="icon" href="/favicon.ico" />
             </Head>
-            <section className={utilStyles.headingMd}>…</section>
-            <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-                <h2 className={utilStyles.headingLg}>Blog</h2>
-                <ul className={utilStyles.list}>
-                    {allPostsData.map(({id, date, title}) => (
-                        <li className={utilStyles.listItem} key={id}>
-                            <Link href={`/posts/${id}`}>
-                                {title}
-                            </Link>
-                            <br/>
-                            <small className={utilStyles.lightText}>
-                                <Date dateString={date}/>
-                            </small>
-                        </li>
-                    ))}
-                </ul>
-            </section>
-        </Layout>
+
+            <header>
+                <h1>
+                    { story ? story.name : 'My Site' }
+                </h1>
+            </header>
+
+            <main>
+                { story ? story.content.body.map((blok) => (
+                    <DynamicComponent blok={blok} key={blok._uid}/>
+                )) : null }
+            </main>
+        </div>
     )
 }
 
+export async function getStaticProps(context) {
+    const slug = 'home'
+    const params = {
+        version: 'draft', // or 'published'
+    }
 
+    if (context.preview) {
+        params.version = 'draft'
+        params.cv = Date.now()
+    }
 
-export const getStaticProps: GetStaticProps =  async () => {
-    // Get external data from the file system, API, DB, etc.
-    const allPostsData = getSortedPostsData()
+    const { data } = await Storyblok.get(`cdn/stories/${slug}`, params)
 
-    // The value of the `props` key will be
-    //  passed to the `Home` component
     return {
         props: {
-            allPostsData
-        }
+            story: data ? data.story : false,
+            preview: context.preview || false
+        },
+        revalidate: 10,
     }
 }

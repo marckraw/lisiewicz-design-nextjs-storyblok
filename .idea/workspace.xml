@@ -14,8 +14,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c3c1ba1-220a-4f52-b541-48a4e4ba975d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/DynamicComponent.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Teaser.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/storyblok-hook.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/storyblok.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/tasks/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/tasks/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +81,7 @@
       <workItem from="1606664950339" duration="3634000" />
       <workItem from="1606673147704" duration="1734000" />
       <workItem from="1607075993706" duration="4541000" />
+      <workItem from="1614283772316" duration="2004000" />
     </task>
     <servers />
   </component>
@@ -91,34 +99,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="655" y="349" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606679401234">
-      <screen x="0" y="25" width="1920" height="1055" />
-    </state>
-    <state x="655" y="349" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1920.1055/-2048.25.2048.1255@0.25.1920.1055" timestamp="1606679401234" />
-    <state x="648" y="292" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1606664159218">
-      <screen x="0" y="25" width="1920" height="1055" />
-    </state>
-    <state x="648" y="292" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.25.1920.1055/-2048.25.2048.1255@0.25.1920.1055" timestamp="1606664159218" />
-    <state x="335" y="146" key="SettingsEditor" timestamp="1606677946076">
-      <screen x="0" y="25" width="1920" height="1055" />
-    </state>
-    <state x="335" y="146" key="SettingsEditor/0.25.1920.1055/-2048.25.2048.1255@0.25.1920.1055" timestamp="1606677946076" />
-    <state x="1013" y="494" key="SettingsEditor/0.25.3008.1667/-2048.25.2048.1255@0.25.3008.1667" timestamp="1606081827474" />
-    <state x="770" y="387" width="567" height="586" key="find.popup" timestamp="1606680485958">
-      <screen x="0" y="25" width="1920" height="1055" />
-    </state>
-    <state x="770" y="387" width="567" height="586" key="find.popup/0.25.1920.1055/-2048.25.2048.1255@0.25.1920.1055" timestamp="1606680485958" />
-    <state x="1206" y="597" width="595" height="522" key="find.popup/0.25.3008.1667/-2048.25.2048.1255@0.25.3008.1667" timestamp="1606082074264" />
-    <state width="600" height="440" key="javadoc.popup" timestamp="1606080528833">
-      <screen x="0" y="25" width="3008" height="1667" />
-    </state>
-    <state width="600" height="440" key="javadoc.popup/0.25.3008.1667/-2048.25.2048.1255@0.25.3008.1667" timestamp="1606080528833" />
-    <state x="1169" y="412" width="670" height="676" key="search.everywhere.popup" timestamp="1607078847623">
-      <screen x="0" y="25" width="3008" height="1667" />
-    </state>
-    <state x="746" y="270" width="670" height="428" key="search.everywhere.popup/0.25.1920.1055/-2048.25.2048.1255@0.25.1920.1055" timestamp="1606680997385" />
-    <state x="1169" y="412" width="670" height="676" key="search.everywhere.popup/0.25.3008.1667/-2048.25.2048.1255@0.25.3008.1667" timestamp="1607078847623" />
   </component>
 </project>
